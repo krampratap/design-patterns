@@ -1,11 +1,5 @@
 package behavioural.strategy.payment;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
 public class CreditCard {
     private int amount = 10000;
     private  String number;

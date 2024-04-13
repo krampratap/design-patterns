@@ -1,8 +1,5 @@
 package behavioural.strategy.payment;
 
-import lombok.Setter;
-
-@Setter
 public class PaymentService {
     private int cost;
     private boolean includeDelivery;
