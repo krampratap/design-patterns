@@ -7,7 +7,7 @@ public class Shop {
         Phone p = new Phone("Andoid","Qualcomm", 6.5,1000,2);
         System.out.println(p);
 
-        PhoneBuilder p1 = new PhoneBuilder().setOs("Iphone");
+        PhoneBuilder p1 = new PhoneBuilder().setOs("Iphone").setBattery(10); //You can concatenate the set Methods as we are returning " this "
         Phone p2 = p1.getPhone();
         System.out.println(p2);
     }

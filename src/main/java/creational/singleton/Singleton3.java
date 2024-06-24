@@ -39,8 +39,7 @@ class Database3{
 
     //To solve the above concurrent call problem we can add synchronized
     //This synchronized will reduce the performance by 100 times of the application as it will lock
-    // once called and unlock
-    //after the call is done
+    // once called and unlock after the call is done
     public static synchronized Database3 getInstance()
     {
         if(Obj==null)
