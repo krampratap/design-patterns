@@ -5,6 +5,10 @@ public class PaymentService {
     private boolean includeDelivery;
     private PaymentStrategy strategy;
 
+    public void setStrategy(PaymentStrategy strategy) {
+        this.strategy = strategy;
+    }
+
     public void processOrder(){
         strategy.collectPaymentDetails();
         if(strategy.validatePaymentDetails())
@@ -28,9 +32,5 @@ public class PaymentService {
 
     public void setIncludeDelivery(boolean includeDelivery) {
         this.includeDelivery = includeDelivery;
-    }
-
-    public void setStrategy(PaymentStrategy strategy) {
-        this.strategy = strategy;
     }
 }
