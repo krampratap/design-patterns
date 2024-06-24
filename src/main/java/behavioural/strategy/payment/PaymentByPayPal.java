@@ -10,7 +10,7 @@ public class PaymentByPayPal implements PaymentStrategy {
     }
 
     @Override
-    public boolean validatePaymenrDetails() {
+    public boolean validatePaymentDetails() {
         return true;
     }
 

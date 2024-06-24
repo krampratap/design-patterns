@@ -10,7 +10,7 @@ public class PaymentByCreditCard implements PaymentStrategy {
     }
 
     @Override
-    public boolean validatePaymenrDetails() {
+    public boolean validatePaymentDetails() {
         //Validate credit card
         return true;
     }

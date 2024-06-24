@@ -2,6 +2,6 @@ package behavioural.strategy.payment;
 
 public interface PaymentStrategy {
     void collectPaymentDetails();
-    boolean  validatePaymenrDetails();
+    boolean validatePaymentDetails();
     void pay(int amount);
 }

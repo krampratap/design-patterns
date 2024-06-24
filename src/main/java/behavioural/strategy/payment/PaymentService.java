@@ -7,7 +7,7 @@ public class PaymentService {
 
     public void processOrder(){
         strategy.collectPaymentDetails();
-        if(strategy.validatePaymenrDetails())
+        if(strategy.validatePaymentDetails())
         {
             strategy.pay(getTotal());
         }
