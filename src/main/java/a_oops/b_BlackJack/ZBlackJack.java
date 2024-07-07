@@ -1,6 +1,16 @@
 package a_oops.b_BlackJack;
 
 
+/*
+    CardSuit
+    Card
+    Deck -- random, shuffle
+    Player
+        UserPlayer
+        Dealer
+    Hand - Each player will have a hand
+    GameRound
+ */
 class ZBlackJack {
     public static void main(String[] args) {
         UserPlayer player = new UserPlayer(1000, new Hand());
