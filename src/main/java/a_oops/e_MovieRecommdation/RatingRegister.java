@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 class RatingRegister {
-    private Map<Integer, List<Movie>> userMovies;
-    private Map<Integer, Map<Integer, MovieRating>> movieRatings;
+    private final Map<Integer, List<Movie>> userMovies;
+    private final Map<Integer, Map<Integer, MovieRating>> movieRatings;
 
-    private List<Movie> movies;
-    private List<User> users;
+    private final List<Movie> movies;
+    private final List<User> users;
 
     public RatingRegister() {
         this.userMovies = new HashMap<>();

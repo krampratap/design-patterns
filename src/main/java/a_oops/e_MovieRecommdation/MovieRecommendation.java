@@ -3,7 +3,7 @@ package a_oops.e_MovieRecommdation;
 import java.util.Map;
 
 class MovieRecommendation {
-    private RatingRegister ratingRegister;
+    private final RatingRegister ratingRegister;
 
     public MovieRecommendation(RatingRegister ratingRegister) {
         this.ratingRegister = ratingRegister;

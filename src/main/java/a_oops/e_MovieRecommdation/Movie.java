@@ -1,8 +1,8 @@
 package a_oops.e_MovieRecommdation;
 
 class Movie {
-    private int id;
-    private String title;
+    private final int id;
+    private final String title;
 
     public Movie(int id, String title) {
         this.id = id;
