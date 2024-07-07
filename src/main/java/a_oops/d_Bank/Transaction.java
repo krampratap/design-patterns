@@ -1,6 +1,6 @@
 package a_oops.d_Bank;
 
-class Transaction {
+abstract class Transaction {
     private final int customerId;
     private final int tellerId;
 
@@ -17,7 +17,5 @@ class Transaction {
         return tellerId;
     }
 
-    public String getTransactionDescription() {
-        return "";
-    }
+    public abstract String getTransactionDescription();
 }

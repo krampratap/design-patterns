@@ -22,7 +22,7 @@ class BankBranch {
     }
 
     private BankTeller getAvailableTeller() {
-        int index = (int) Math.round(new Random().nextInt() * (this.tellers.size() - 1));
+        int index = (int) Math.round(Math.random() * (this.tellers.size() - 1));
         return this.tellers.get(index);
     }
 
