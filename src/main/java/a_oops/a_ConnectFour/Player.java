@@ -1,8 +1,8 @@
 package a_oops.a_ConnectFour;
 
 public class Player {
-    private String name;
-    private GridPosition piece;
+    private final String name;
+    private final GridPosition piece;
 
     public Player(String name, GridPosition piece) {
         this.name = name;

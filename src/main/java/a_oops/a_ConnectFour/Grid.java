@@ -1,9 +1,9 @@
 package a_oops.a_ConnectFour;
 
 public class Grid {
-    private int rows;
-    private int columns;
-    private int[][] grid;
+    private final int rows;
+    private final int columns;
+    private int[][] playGrid;
 
     public Grid(int rows, int columns) {
         this.rows = rows;
@@ -12,16 +12,16 @@ public class Grid {
     }
 
     public void initGrid() {
-        this.grid = new int[rows][columns];
+        this.playGrid = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                grid[i][j] = GridPosition.EMPTY.ordinal();
+                playGrid[i][j] = GridPosition.EMPTY.ordinal();
             }
         }
     }
 
-    public int[][] getGrid() {
-        return this.grid;
+    public int[][] getPlayGrid() {
+        return this.playGrid;
     }
 
     public int getColumnCount() {
@@ -37,8 +37,8 @@ public class Grid {
         }
         // Place piece in the lowest empty row
         for (int row = this.rows - 1; row >= 0; row--) {
-            if (this.grid[row][column] == GridPosition.EMPTY.ordinal()) {
-                this.grid[row][column] = piece.ordinal();
+            if (this.playGrid[row][column] == GridPosition.EMPTY.ordinal()) {
+                this.playGrid[row][column] = piece.ordinal();
                 return row;
             }
         }
@@ -49,7 +49,7 @@ public class Grid {
         // Check horizontal
         int count = 0;
         for (int c = 0; c < this.columns; c++) {
-            if (this.grid[row][c] == piece.ordinal()) {
+            if (this.playGrid[row][c] == piece.ordinal()) {
                 count++;
             } else {
                 count = 0;
@@ -62,7 +62,7 @@ public class Grid {
         // Check vertical
         count = 0;
         for (int r = 0; r < this.rows; r++) {
-            if (this.grid[r][col] == piece.ordinal()) {
+            if (this.playGrid[r][col] == piece.ordinal()) {
                 count++;
             } else {
                 count = 0;
@@ -76,7 +76,7 @@ public class Grid {
         count = 0;
         for (int r = 0; r < this.rows; r++) {
             int c = row + col - r; // row + col = r + c, for a diagonal
-            if (c >= 0 && c < this.columns && this.grid[r][c] == piece.ordinal()) {
+            if (c >= 0 && c < this.columns && this.playGrid[r][c] == piece.ordinal()) {
                 count++;
             } else {
                 count = 0;
@@ -90,7 +90,7 @@ public class Grid {
         count = 0;
         for (int r = 0; r < this.rows; r++) {
             int c = col - row + r; // row - col = r - c, for an anti-diagonal
-            if (c >= 0 && c < this.columns && this.grid[r][c] == piece.ordinal()) {
+            if (c >= 0 && c < this.columns && this.playGrid[r][c] == piece.ordinal()) {
                 count++;
             } else {
                 count = 0;

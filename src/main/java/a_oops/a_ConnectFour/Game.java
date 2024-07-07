@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 public class Game {
     static Scanner input = new Scanner(System.in);
-    private Grid grid;
-    private int connectN;
-    private Player[] players;
-    private Map<String, Integer> score;
-    private int targetScore;
+    private final Grid grid;
+    private final int connectN;
+    private final Player[] players;
+    private final Map<String, Integer> score;
+    private final int targetScore;
 
     public Game(Grid grid, int connectN, int targetScore) {
         this.grid = grid;
@@ -30,7 +30,7 @@ public class Game {
 
     private void printBoard() {
         System.out.println("Board:");
-        int[][] grid = this.grid.getGrid();
+        int[][] grid = this.grid.getPlayGrid();
         for (int i = 0; i < grid.length; i++) {
             String row = "";
             for (int piece : grid[i]) {
