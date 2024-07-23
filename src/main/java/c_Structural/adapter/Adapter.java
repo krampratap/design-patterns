@@ -20,7 +20,9 @@ public class Adapter {
         /* Section 2 Adapter Implementation
         3. Now as the tool is not able to process xml data we have to change the tool
         // to ADAPTER */
-        DataAnalyticsNewToolAdapter adapter = new DataAnalyticsNewToolAdapter();
+        IDataAnalyticsOldTool adapter = new DataAnalyticsNewToolAdapter();
+        //As we are implementing the same Interface, the client does not have to change the code..we can inject the new tool
+        //using dependency injection
         adapter.analyseData(xmlData);
     }
 }
