@@ -15,9 +15,6 @@ public class Singleton4 {
                 Database4 d1 = Database4.getInstance();
             }
         });
-        //Earlier example only one main method (one thread). So only one instance.
-        //If two threads access the getInstance simultaneously then we will have two objects. NOT SINGLETON.
-        //Un comment and Run the code.
         t1.start();
         t2.start();
     }
